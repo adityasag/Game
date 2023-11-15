@@ -1,0 +1,61 @@
+#rock paper and scissors
+import random
+
+while True:
+
+    choises=["rock","paper","scissor"]
+
+    #2 players one(computer) and one(player) which will choose
+    computer = random.choice(choises)
+    player = None
+    
+    while player not in choises:
+         player=input("rock or paper or scissor ? =").lower()
+
+
+    if player==computer:
+        print("player:",player)
+        print("Computer:",computer)
+        print("Tie!,Try again!")
+#For rock
+    elif player=="rock":
+      if computer=="paper":
+           print("player:",player)
+           print("Computer:",computer)
+           print("Player wins! Congratulations")
+      if computer=="scissor":
+            print("player:",player)
+            print("Computer:",computer)
+            print("Player wins! Congratulations")
+
+#For paper
+    elif player=="paper":
+      if computer=="rock":
+           print("player:",player)
+           print("Computer:",computer)
+           print("You loose!")
+      if computer=="scissor":
+            print("player:",player)
+            print("Computer:",computer)
+            print("You loose!")
+     
+
+#For scissor
+    elif player=="scissor":
+      if computer=="paper":
+           print("player:",player)
+           print("Computer:",computer)
+           print("Player wins! Congratulations")
+      if computer=="rock":
+            print("player:",player)
+            print("Computer:",computer)
+            print("You loose!")
+
+    play_again = input("Do you wanaa play again? (Y/N):").lower()
+
+    if play_again != "y" :
+        if play_again !="yes":
+            break
+
+   
+print("Bye!")
